@@ -1,6 +1,6 @@
 import openpyxl
 
-# this file lets you convert 1C store file to needable format (format of packing list) 
+# this file lets you convert 1C store file to necessary format (format of packing list) 
 
 wb = openpyxl.load_workbook("store.xlsx")
 sheet = wb.active

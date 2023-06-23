@@ -27,13 +27,13 @@ YELLOW = PatternFill(start_color="FFFFFF00", end_color="FFFFFF00", fill_type="so
 directory = list(os.listdir(PATH_TO_MANY))
 files_for_comparing = list(filter(lambda file: file[-5:] == ".xlsx", directory))
 
-# vendoe cnain | quantity | coordinate
+# vendor chain | quantity | coordinate
 result = [[] for _ in range(len(files_for_comparing))]
 invoices = []
 
 start_time = datetime.datetime.now()
 
-# conver files to big array
+# convert files to big array
 for i in range(len(files_for_comparing)):
     workbook_compare_obj = openpyxl.load_workbook(PATH_TO_MANY + files_for_comparing[i])
     sheet_compare_obj = workbook_compare_obj.active
